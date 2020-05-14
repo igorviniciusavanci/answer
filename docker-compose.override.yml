@@ -12,6 +12,10 @@ services:
       - 5432:5432
     volumes:
       - ./db/backups:/backups
+    environment:
+      - POSTGRES_PASSWORD=answer
+      - POSTGRES_USER=answer
+      - POSTGRES_DB=answer
 
   pgadmin:
     image: fenglc/pgadmin4

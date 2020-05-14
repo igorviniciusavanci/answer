@@ -10,7 +10,6 @@ services:
       dockerfile: ./api/Dockerfile
     container_name: "server-node"
     stdin_open: true
-    env_file: .env
 
     links:
       - db-postgres
@@ -21,7 +20,6 @@ services:
     build: db
     container_name: "db-postgres"
     restart: always
-    env_file: .env
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./db/backups:/backups
