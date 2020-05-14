@@ -20,4 +20,4 @@ You can use this [project](https://google.com)
 
 ## License
 
-[MIT](https://google.com)
+[MIT](https://github.com/igorviniciusavanci/answer/blob/master/LICENSE)
