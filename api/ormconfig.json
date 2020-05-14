@@ -2,9 +2,9 @@
   "type": "postgres",
   "host": "db-postgres",
   "port": 5432,
-  "username": "ansower",
-  "password": "ansower",
-  "database": "ansower",
+  "username": "answer",
+  "password": "answer",
+  "database": "answer",
   "entities": [
     "./src/models/*.ts"
   ],

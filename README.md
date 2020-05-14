@@ -9,7 +9,20 @@ docker-compose build
 ```
 
 ```sh
-docker-compose up
+docker-compose up -d
+```
+
+```sh
+docker-compose exec server-node bash
+```
+```sh
+yarn
+```
+```sh
+yarn typeorm migration:run
+```
+```sh
+yarn dev:server
 ```
 
 ## [API Documentation](https://documenter.getpostman.com/view/1702556/SzmiXGGr)
