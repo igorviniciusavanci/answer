@@ -1,0 +1,27 @@
+version: "3"
+
+volumes:
+  postgres_data: {}
+
+services:
+  server-node:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    container_name: "server-node"
+    stdin_open: true
+    env_file: .env
+
+    links:
+      - db-postgres
+    depends_on:
+      - db-postgres
+
+  db-postgres:
+    build: db
+    container_name: "db-postgres"
+    restart: always
+    env_file: .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/backups:/backups
